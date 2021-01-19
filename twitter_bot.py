@@ -6,9 +6,9 @@ consumer_secret = environ('CONSUMER_SECRET')
 access_key = environ('ACCESS_KEY')
 access_secret = environ('ACCESS_SECRET')
 
-auth = tweepy.OAuthHandler('','') # enter consumer_key, consumer_secret
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret) # enter consumer_key, consumer_secret
 
-auth.set_access_token('', '') # enter key, secret
+auth.set_access_token(access_key, access_secret) # enter key, secret
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
