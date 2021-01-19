@@ -1,10 +1,10 @@
 from os import environ
 import tweepy, time
 
-consumer_key = environ('')
-consumer_secret = environ('')
-access_key = environ('')
-access_secret = environ('')
+consumer_key = environ('CONSUMER_KEY')
+consumer_secret = environ('CONSUMER_SECRET')
+access_key = environ('ACCESS_KEY')
+access_secret = environ('ACCESS_SECRET')
 
 auth = tweepy.OAuthHandler('','') # enter consumer_key, consumer_secret
 
