@@ -1,6 +1,7 @@
 from os import environ
 import tweepy, time
 
+print("This is a Twitter Bot")
 consumer_key = environ['CONSUMER_KEY']
 consumer_secret = environ['CONSUMER_SECRET']
 access_key = environ['ACCESS_KEY']
@@ -10,34 +11,12 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret) # enter consumer_key, 
 
 auth.set_access_token(access_key, access_secret) # enter key, secret
 
-api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+api = tweepy.API(auth, wait_on_rate_limit=True)
 
 #user = api.me()
 
 #print(user.screen_name)
 
-
-
-"""
-#This is for geting the timeline tweet from your account.
-api = tweepy.API(auth)
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
-    print(tweet.text)
-"""
-
-
-"""
-#Getting follower count and names.
-
-name = str(input("Enter twitter @"))
-user = api.get_user(name)
-print("Account name:",user.screen_name)
-print("Followers:", user.followers_count)
-print("List:")
-for friend in user.friends():
-    print(friend.screen_name)
-"""
 user = api.me()
 print(user.name)
 
@@ -47,7 +26,7 @@ count = 0
 uncount = 0
 
 deadline = 400  # No of tweets using automation
-wait = 5
+wait = 10
 try:
 
     while count < deadline:
@@ -74,7 +53,7 @@ try:
                 #print(e.reason)
                 uncount += 1
                 print("Repeated:",uncount)
-                time.sleep(2)
+                time.sleep(10)
 
             except StopIteration:
                 break
@@ -102,7 +81,7 @@ try:
                 #print(e.reason)
                 uncount += 1
                 print("Repeated:",uncount)
-                time.sleep(2)
+                time.sleep(10)
 
             except StopIteration:
                 break
@@ -129,7 +108,7 @@ try:
                 # print(e.reason)
                 uncount += 1
                 print("Repeated:", uncount)
-                time.sleep(3)
+                time.sleep(10)
 
             except StopIteration:
                 break
