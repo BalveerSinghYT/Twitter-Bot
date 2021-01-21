@@ -26,11 +26,12 @@ nrTweets = 1000
 count = 0
 uncount = 0
 
-deadline = 400  # No of tweets using automation
+deadline = 700  # No of tweets using automation
 wait = 10
 try:
-
     while count < deadline:
+        if count == 690:
+            time.sleep(10000)
         search = "#100DaysOfCode"
         uncount = 0
         for tweet in tweepy.Cursor(api.search,search).items(nrTweets):
