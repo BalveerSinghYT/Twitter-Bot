@@ -61,7 +61,7 @@ try:
                 break
 
         #------------------------------- #Python -----------------------
-        search = "#Python"
+        search = "#Developers"
         uncount = 0
 
         for tweet in tweepy.Cursor(api.search,search).items(nrTweets):
