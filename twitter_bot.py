@@ -27,7 +27,7 @@ count = 0
 uncount = 0
 
 deadline = 700  # No of tweets using automation
-wait = 10
+wait = 20
 try:
     while count < deadline:
         if count == 690:
@@ -89,7 +89,7 @@ try:
                 break
 
         #------------------ #coding -------------------------------
-        search = "#100daysofcode"
+        search = "#day code"
         uncount = 0
 
         for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
