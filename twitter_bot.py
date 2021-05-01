@@ -55,7 +55,10 @@ try:
                 #print(e.reason)
                 uncount += 1
                 print("Repeated:",uncount)
+                tweet.favorite()
+                print("Favorite")
                 time.sleep(10)
+                
 
             except StopIteration:
                 break
