@@ -31,7 +31,7 @@ wait = 20
 try:
     while count < deadline:
         if count == 690:
-            time.sleep(10000)
+            time.sleep(15000)
         search = "#100DaysOfCode"
         uncount = 0
         for tweet in tweepy.Cursor(api.search,search).items(nrTweets):
