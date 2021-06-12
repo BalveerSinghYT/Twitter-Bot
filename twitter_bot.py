@@ -89,7 +89,7 @@ try:
                 break
 
         #------------------ #coding -------------------------------
-        search = "#Freelancer"
+        search = "#CodeNewBie"
         uncount = 0
 
         for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
