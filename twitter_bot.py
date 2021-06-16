@@ -26,8 +26,8 @@ nrTweets = 1000
 count = 0
 uncount = 0
 
-deadline = 700  # No of tweets using automation
-wait = 20
+deadline = 600  # No of tweets using automation
+wait = 22
 try:
     while count < deadline:
         if count == 690:
